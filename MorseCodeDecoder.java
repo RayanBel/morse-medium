@@ -8,7 +8,6 @@ public class MorseCodeDecoder {
         int times = cleaned.length();
         if(cleaned.contains("0"))
             for(int i=1;i<cleaned.length();i++){
-                System.out.println("Bucle: "+i);
                 if(Pattern.compile("([^1]|^)1{"+i+"}([^1]|$)").matcher(cleaned).find()||
                    Pattern.compile("[^0]0{"+i+"}[^0]").matcher(cleaned).find()){
                     times=i;
